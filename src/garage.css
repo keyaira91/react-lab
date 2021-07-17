@@ -1,0 +1,11 @@
+div.garage h1 {
+    background-color: pink;
+}
+
+div.garage {
+    margin-top: 4rem;
+}
+
+div:first-of-type.garage {
+    margin: 0;
+}
