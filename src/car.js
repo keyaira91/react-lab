@@ -4,15 +4,18 @@ import ReactDOM from "react-dom";
 
 
 class Car extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-    var notReady = document.getElementById("myBtn")
-}
-
-  changeReady = (notReady) => {
-    this.setState({textDecoration: "line-trough"});
+  constructor(props) {
+    super(props)
+    this.changeReady = this.changeReady.bind(this)
   }
+
+  changeReady(e) {
+    const id = e.target.id;
+    document.getElementById(id).innerHTML = "Not Ready";
+  }
+  // changeReady() {
+  //   this.setState.myBtn({textDecoration: "line-trough"});
+  // }
 
     render() {
       const {year, color, make, model, tag} = this.props.car;
