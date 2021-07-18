@@ -16,7 +16,6 @@ class Car extends React.Component {
     this.setState({ready: "Not Ready", deco:({textDecoration: "line-trough"})})
   }
 
-
     render() {
       const {year, color, make, model, tag} = this.props.car;
       return (
