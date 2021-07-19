@@ -1,4 +1,5 @@
 import React from "react";
+import Garage from "./garage";
 // import ReactDOM from "react-dom";
 
 
@@ -10,10 +11,9 @@ class Car extends React.Component {
       ready: "Ready",
     }
   }
-
   notReady = () => {
-    var style = { textDecoration: "line-through" };
-      this.setState({ready: "Not Ready"});
+    var style = <div style={{textDecoration : "line-through"}}></div>;
+      this.setState({ready: "Not Ready", style});
       if(this.state.ready === "Not Ready") {
         this.isReady()
       }
