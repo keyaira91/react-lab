@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 
 
 
@@ -8,12 +8,16 @@ class Car extends React.Component {
     super(props)
     this.state = {
       ready: "Ready",
-      // deco: doCarThingy() ({textDecoration: "none"})
     }
   }
 
   notReady = () => {
-    this.setState({ready: "Not Ready", deco:({textDecoration: "line-trough"})})
+      this.setState({ready: "Not Ready"})
+  }
+
+  ready = () => {
+      this.setState({ready: "Ready"});
+  
   }
 
     render() {
@@ -21,7 +25,7 @@ class Car extends React.Component {
       return (
       <div>
         <h2 >{year} {color} {make}, {model} with tag # {tag}{" "}
-        <button type="button" id="myBtn" onClick={this.notReady}
+        <button type="button" id="myBtn" onClick={this.notReady} 
         className="btn btn-sm btn-danger">{this.state.ready}</button></h2>
       </div>)};
 };
