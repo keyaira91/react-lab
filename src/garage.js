@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+// import ReactDOM from "react-dom";
 import Car from "./car";
 import "./garage.css";
 class Garage extends React.Component {
