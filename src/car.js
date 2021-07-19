@@ -12,23 +12,23 @@ class Car extends React.Component {
   }
 
   notReady = () => {
-      this.setState({ready: "Not Ready"})
+      this.setState({ready: "Not Ready"});
+      if(this.state.ready === "Not Ready") {
+        this.isReady()
+      }
   }
 
-<<<<<<< HEAD
-  ready = () => {
+  isReady = () => {
       this.setState({ready: "Ready"});
   
   }
 
-=======
->>>>>>> b78c9b824c7c0009da150994c216f0804c32b293
     render() {
       const {year, color, make, model, tag} = this.props.car;
       return (
       <div>
         <h2 >{year} {color} {make}, {model} with tag # {tag}{" "}
-        <button type="button" id="myBtn" onClick={this.notReady} 
+        <button type="button" id="myBtn" onClick={this.notReady}  
         className="btn btn-sm btn-danger">{this.state.ready}</button></h2>
       </div>)};
 };
