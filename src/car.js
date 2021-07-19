@@ -12,6 +12,7 @@ class Car extends React.Component {
   }
 
   notReady = () => {
+    var style = { textDecoration: "line-through" };
       this.setState({ready: "Not Ready"});
       if(this.state.ready === "Not Ready") {
         this.isReady()
@@ -28,7 +29,7 @@ class Car extends React.Component {
       return (
       <div>
         <h2 >{year} {color} {make}, {model} with tag # {tag}{" "}
-        <button type="button" id="myBtn" onClick={this.notReady}  
+        <button type="button" onClick={this.notReady}  
         className="btn btn-sm btn-danger">{this.state.ready}</button></h2>
       </div>)};
 };
