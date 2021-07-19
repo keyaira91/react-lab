@@ -15,11 +15,14 @@ class Car extends React.Component {
       this.setState({ready: "Not Ready"})
   }
 
+<<<<<<< HEAD
   ready = () => {
       this.setState({ready: "Ready"});
   
   }
 
+=======
+>>>>>>> b78c9b824c7c0009da150994c216f0804c32b293
     render() {
       const {year, color, make, model, tag} = this.props.car;
       return (
