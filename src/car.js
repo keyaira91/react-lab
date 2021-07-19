@@ -9,11 +9,12 @@ class Car extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      ready: "Ready"
+      ready: "Ready",
+      needsWork: false,
     }
   }
   notReady = () => {
-      this.setState({ ready: "Not Ready" });
+      this.setState({ ready: "Not Ready", needsWork: true });
       if(this.state.ready === "Not Ready") {
         this.isReady()
       }
@@ -21,14 +22,14 @@ class Car extends React.Component {
   }
 
   isReady = () => {
-      this.setState({ready: "Ready"});
+      this.setState({ready: "Ready", needsWork: false});
   }
 
     render() {
       const {year, color, make, model, tag} = this.props.car;
       return (
       <div>
-        <h2 //className={this.state.ready ? "ready" : " "}
+        <h2 className={this.state.needsWork ? "needsWork" : " "}
         >{year} {color} {make}, {model} with tag # {tag}{" "}
         <button type="button" onClick={this.notReady}  
         className="btn btn-sm btn-danger">{this.state.ready}</button></h2>
