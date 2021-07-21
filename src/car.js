@@ -1,5 +1,5 @@
 import React from "react";
-import Garage from "./garage";
+// import Garage from "./garage";
 import "./garage.css"
 // import ReactDOM from "react-dom";
 
